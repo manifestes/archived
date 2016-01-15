@@ -1,0 +1,269 @@
+<div
+  class="intro"
+  ng-class="{hidden:!state.intro}">
+  <div class="splash">
+    <div
+      class="mouseoverlay"
+      ng-click="swiping ? ( swiping = false ) : slideSplashImage(true,true);"
+      ng-swipe-left="slideSplashImage(true); swiping=true;"
+      ng-swipe-right="slideSplashImage(false); swiping=true;">
+    </div>
+    <i
+      class="arrow right fa fa-caret-right"
+      ng-if="state.introimage < meta.splash.images.length-1"
+      ng-click="slideSplashImage(true,true)"></i>
+    <i
+      class="arrow left fa fa-caret-left"
+      ng-if="state.introimage > 0"
+      ng-click="slideSplashImage(false,true)"></i>
+
+    <div
+      ng-repeat="i in meta.splash.images"
+      class="image"
+      back-img="{{settings.datapath}}splash/{{i.filename}}"
+      ng-style="{'background-color': i.color}"
+      ng-class="{
+        active: $index == state.introimage,
+        left: $index > state.introimage,
+        right: $index < state.introimage,
+        full: i.full
+      }">
+    </div>
+  </div>
+
+  <div class="foot">
+    <!-- <div class="keywords">{{meta.splash.keywords}}</div> -->
+    <div class="button color-{{getRandomInt()}}" ng-click="state.intro=false;">
+      {{meta.splash.enter}}
+    </div>
+  </div>
+</div>
+
+<div id="container" class="container" ng-class="{hidden:state.intro}">
+
+  <div class="header">
+
+    <div class="menu" >
+      
+      <!-- RIGHT MENU BUTTONS, REVERSE ORDER-->
+      <div class="buttons">
+        <div class="button" id="lang">
+          <i class="fa fa-globe"></i>
+          <span>
+            <a class="setlang" ng-class="{active: state.lang=='es'}" href="{{meta.url}}/#/es">es</a>
+            <a class="setlang" ng-class="{active: state.lang=='fr'}" href="{{meta.url}}/#/fr">fr</a>
+          </span>
+        </div>
+
+        <a
+          class="button hover hint--bottom"
+          id="calendar"
+          data-hint="{{meta.menu.calendartip}}"
+          href="http://demosphere.eu/fr">
+          <i class="fa fa-calendar"></i>
+          <span>{{meta.menu.calendar}} <i class="fa fa-external-link-square"></i></span>
+        </a>
+        <div
+          class="button hover"
+          ng-if="state.lang=='fr'"
+          ng-click="changeLayout('map');"
+          ng-class="{active:state.layout=='map'}">
+          <i class="fa fa-map-o"></i>
+          <a class="ext hint--bottom" href="{{meta.source.map}}" target="_blank" data-hint="{{meta.menu.sourcetip}}">
+            <i class="fa fa-file-text"></i>
+          </a>
+          <span>{{meta.menu.map}}</span>
+        </div>
+        <div
+          class="button hover"
+          id="network"
+          ng-if="state.lang=='fr'"
+          ng-click="changeLayout('network');"
+          ng-class="{active:state.layout=='network'}">
+          <i class="fa fa-sitemap"></i>
+          <a class="ext hint--bottom" href="{{meta.source.network}}" target="_blank" data-hint="{{meta.menu.sourcetip}}">
+            <i class="fa fa-file-text"></i>
+          </a>
+          <span>{{meta.menu.network}}</span>
+        </div>
+        <div
+          class="button hover"
+          ng-click="changeLayout('links');"
+          ng-class="{active:state.layout=='links'}">
+          <i class="fa fa-th-list"></i>
+          <a class="ext hint--bottom" href="{{meta.source.links}}" target="_blank" data-hint="{{meta.menu.sourcetip}}">
+            <i class="fa fa-file-text"></i>
+          </a>
+          <span>{{meta.menu.links}}</span>
+        </div>
+        <div class="buttoncontainer">
+          <div
+            class="inner button hover"
+            ng-click="changeLayout('sections');"
+            ng-class="{active:state.layout=='sections'}">
+            <i class="fa fa-bullhorn"></i>
+            <a class="ext hint--bottom" href="{{meta.source.sections}}" target="_blank" data-hint="{{meta.menu.sourcetip}}">
+              <i class="fa fa-file-text"></i>
+            </a>
+            <span>{{meta.menu.sections}}</span>
+          </div>
+          <a 
+            class="printer hint--bottom"
+            data-hint="{{meta.menu.printtip}}"
+            href="./#/{{state.lang}}/sectionsprint"
+            target="_blank"><i class="fa fa-print"></i> {{meta.menu.print}}
+          </a>
+        </div>
+      </div>
+
+
+      <!-- BACK TO INTRO -->
+      <div class="minimenu">
+        <div
+          class="action backintro hint--right"
+          data-hint="{{meta.menu.backtip}}"
+          ng-click="state.intro = true;">
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div
+          class="action home hint--right"
+          data-hint="{{meta.menu.hometip}}"
+          ng-click="changeLayout('home');"
+          ng-class="{active:state.layout=='home'}">
+          <i class="fa fa-home"></i>
+        </div>
+      <!-- closing div is under to avoid space between inline-blocks -->
+      </div>
+
+      <!-- SEARCH ZONE -->
+      <div
+        class="searchinput"
+        ng-class="{inactive: state.layout=='map' || state.layout=='full' || state.layout=='home'}"
+        ng-mouseover="state.tagspanel=true;">
+
+        <!-- TAG ACTIVATOR -->
+        <div
+          class="tagactivator hint--bottom"
+          data-hint="{{state.taggingtooltip}}"
+          ng-class="{
+            active: state.tagging,
+            filtered: state.tags.length>0
+          }"
+          ng-click="toggleTagging();">
+          <i
+            class="fa"
+            ng-class="{
+              'fa-tag': !state.tagging,
+              'fa-tags': state.tagging
+            }"></i>
+          <!-- SEARCH IN... -->
+          <div class="within" ng-if="!state.tags.length">dans toutes les thématiques</div>
+          <div class="within" ng-if="state.tags.length>0">dans {{state.tags.length}} thématiques</div>
+        </div><form autocomplete="off" ng-submit="searchSubmit(state.searchinput);">
+          <!-- TEXTFIELD -->
+          <input
+            type="text"
+            placeholder="{{meta.menu.search}}"
+            ng-model="state.searchinput" 
+            ng-click="$event.stopPropagation();"
+            ng-enter="searchSubmit(state.searchinput);"
+            ng-class="{highlight:state.search}"/>
+          <i
+          ng-if="state.searchinput.length"
+          ng-click="searchSubmit(); toggleTag(t); state.tagspanel=false;"
+          class="clearinput fa fa-times fa-lg"></i>
+          <i
+          ng-click="state.searchinput.length && searchSubmit(state.searchinput);"
+          class="goinput fa fa-search fa-lg"></i>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- TAGS COLLAPSABLE PANEL -->
+    <div
+      class="tagspanel"
+      ng-class="{filtering: state.tags.length, active: state.tagging && state.tagspanel}">
+      <!-- either GRAPH -->
+      <div class="tagsdisplay" id="sigma-tags"></div>
+      <!-- either GRID -->
+      <div class="tagsdisplay" id="grid-tags" ng-if="state.tagsmode=='grid'">
+        <div
+          ng-repeat="t in tagsContentsOrdered"
+          ng-click="toggleTag(t.tag);"
+          class="gridtag"
+          data-hint="{{t.description}}"
+          ng-focus="true"
+          ng-class="{
+            icon: t.icon,
+            important: t.important,
+            active: isTagActive(t.tag),
+            popuped: isTagAutoComplete(t),
+            'hint--left': $index%10>7,
+            'hint--bottom': $index%10<8
+          }"><i ng-if="t.icon" class="meta fa fa-{{t.icon}}"></i>{{t.label}}</div>
+      </div>
+      <!--
+      <div class="tagdescription">
+        <span ng-if="state.overtag.tag">#{{state.overtag.tag}}</span> <br>
+        {{state.overtag.description}}
+
+        (<span class="displaymode" ng-if="state.tagsmode=='graph'" ng-click="state.tagsmode='grid';">afficher la grille</span><span class="displaymode" ng-if="state.tagsmode=='grid'" ng-click="state.tagsmode='graph';">afficher le réseau</span>)
+      </div>
+      -->
+    </div>
+
+  </div>
+
+  <div class="wrapper layout-{{state.layout}}" ng-mouseover="state.tagspanel=false;">
+
+    <!-- message displayed the first time you arrived on a layout -->
+    <div
+      ng-if="state.layout!='sectionsprint'&&state.layout!='home'"
+      class="disclopener"
+      ng-class="{active: !state.disclaim[state.layout]}"
+      ng-click="state.disclaim[state.layout] = true;">
+      <i class="fa fa-question-circle"></i>
+    </div>
+    <div
+      class="disclaimer"
+      ng-if="state.layout!='sectionsprint'&&state.layout!='home'"
+      ng-class="{active: state.disclaim[state.layout]}"
+      ng-click="state.disclaim[state.layout]=false;">
+
+      <span ng-if="state.layout=='sections'"
+      class="full" compile-here="md2Html(meta.disclaimer[state.layout])"></span>
+      <span ng-if="state.layout=='links'"
+      class="full left" compile-here="md2Html(meta.disclaimer[state.layout])"></span>
+      <span ng-if="state.layout=='network'"
+      class="full left" compile-here="md2Html(meta.disclaimer[state.layout])"></span>
+      <span ng-if="state.layout=='map'"
+      class="full" compile-here="md2Html(meta.disclaimer[state.layout])"></span>
+
+      <!-- <span class="close">fermer</span> -->
+      <i class="fa fa-times" ng-click="state.disclaim[state.layout] = false;"></i>
+    </div>
+
+    <!-- loading spinner while not ready -->
+    <div class="loading spinner" ng-if="state.loading">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="page" ng-include="layoutTemplate();"></div>
+
+    <div class="footer">
+      <!--<div class="count" ng-if="state.search || state.tags.length">
+        filtre: {{state.count.sections}} / {{sectionsArray.length}} section(s) & {{state.count.links}} / {{linksArray.length}} lien(s)
+      </div>-->
+      <div class="content" compile-here="md2Html(meta.footer.content)"></div>
+      <a class="lastupdate" target="_blank" href="{{meta.repo}}">{{meta.footer.lastupdatetext}}<br>{{settings.lastupdate}}</a>
+
+      <div><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></div>
+
+      <div id="move-commons-badge"><div xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:mc="http://movecommons.org/ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" about="http://utopies-concretes.org" typeof="mc:Collective"></div><div property="foaf:name" content="Utopies Concrètes"></div><div rel="foaf:homepage" href="http://utopies-concretes.org"></div><div rel="mc:moveCommonsType" resource="[mc:NonProfit]"></div><div rel="mc:moveCommonsType" resource="[mc:Reproducible]"></div><div rel="mc:moveCommonsType" resource="[mc:ReinforcesCommons]"></div><div rel="mc:moveCommonsType" resource="[mc:GrassRoots]"></div><div rel="mc:focusesIn" resource="[mc:Town]"></div><div about="#manifeste" typeof="skos:Concept"></div><div about="# annuaire" typeof="skos:Concept"></div><div about="# carte" typeof="skos:Concept"></div><div about="# alternatives" typeof="skos:Concept"></div><a href="http://movecommons.org/fr/np-rp-rc.to-gr/0.1/"><img src="//movecommons.org/mc/0.1/images/np-rp-rc.to-gr-88x31-0.1.png" alt="Move Commons À but non lucratif, Reproductible, Reinforcing the Town/community/society Commons, Organisation horizontale" /></a></div>
+    </div>
+
+  </div>
+</div>
