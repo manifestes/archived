@@ -22,3 +22,6 @@ larger search field with integrated tagactivator, larger tags-grid on menu hover
 
 ###[160120](http://manifestes.github.io/archived/160120)
 simpler home grid, flattened sections with subtitles, no more disqus, simple left tags-panel, tags not shown within sections/links, full-crawled network, more map sources
+
+###[160420](http://manifestes.github.io/archived/160420)
+simpler map markers, bastamag, reporterre, passerelle eco, ... & many places from the framacalc table

@@ -1,0 +1,297 @@
+
+
+---
+url: http://utopies-concretes.org
+source:
+    github: https://github.com/manifestes/manifestes
+    meta: https://github.com/manifestes/manifestes/blob/gh-pages/data/meta_fr.yml
+    sections: https://github.com/manifestes/manifestes/blob/gh-pages/data/sections_fr.yml
+    links: https://github.com/manifestes/manifestes/blob/gh-pages/data/links_fr.yml
+    network: https://github.com/manifestes/manifestes/blob/gh-pages/data/utiles/network_in.csv
+    map: https://framacalc.org/carto
+splash:
+    images:
+        - urgent-de-ralentir_000.svg
+        - manifeste-utopies-concretes_000.svg
+        - prendre-position_000.svg
+        - collectifs-transition_000.svg
+        - espoirs-fous_000.svg
+    enter: "consulter & participer"
+intro:
+    -   layout: sections
+        icon: fa-bullhorn
+        title: textes
+        descr: des citations et morceaux de textes choisis — pour composer d'autres manières de voir le monde
+        image: FingerBones.jpg
+        quote:
+            author: Audrey
+            content: Que ceux qui sont déjà conscients se sentent soutenus, et que les autres ouvrent les yeux pour changer, à leur rythme, à leur mesure
+    -   layout: links
+        icon: fa-th-list
+        title: liens
+        descr: consulter des textes, vidéos, trouver des médias libres — une sélection d'articles, projets qui méritent d'être connus
+        image: ErwinBlumenfeld.jpg
+        quote:
+            author: Bernard Werber
+            content: L'important n'est pas de convaincre, mais de donner à réfléchir
+    -   layout: network
+        icon: fa-sitemap
+        title: réseau
+        descr: un graphe de près de 3000 sites internet de collectifs, structures, médias, blogs — positions relatives et interconnexions
+        image: DavidBarth.jpg
+        quote:
+            author: Proverbe mexicain
+            content: Ils ont essayé de nous enterrer, ils ne savaient pas que nous étions des graines
+    -   layout: map
+        icon: fa-map-o
+        title: carte
+        descr: "agrégation de plus de 3000 lieux : caravane des alternatives, hétérotopies, articles Reporterre et Bastamag, annonces Passerelle éco, lieux de vie et bases nomades — à visiter !"
+        image: Shigeru_Hatsuyama.jpg
+        quote:
+            author: Chris Marker, Le Joli Mai, 1h28min
+            content: l'avenir est là ! mais les gens ne le voient pas ... ils attendent l'horizon au loin
+mapcredits:
+    -   slug: misc
+        name: Utopies Concrètes
+        description: "ajouts de lieux\nnon encore référencés"
+        url: http://utopies-concretes.org
+        color: 4A787E
+    -   slug: fucrecup
+        name: FUCRécup'
+        description: Festival des Utopies Concrètes - Récup'
+        url: http://festivaldesutopiesconcretes.org/festival-de-la-recup/festival-de-la-recup-2014/acteurs-de-la-recup-2014
+        color: 856D2D        
+    -   slug: caravane
+        name: Caravane des alternatives
+        description: "Lieux et initiatives alternatives,\nécolieux, collectifs"
+        url: http://caravanedesalternatives.weebly.com
+        color: 477D50
+    -   slug: resistance
+        name: Utopies & luttes
+        description: "Utopies concrètes et\nluttes écologiques et sociales"
+        url: https://lesechosduvent.wordpress.com
+        url_map: https://www.google.com/maps/d/embed?mid=zB1OZmeGJ7OA.kepycQ8XsohU
+        color: CC5B79
+    -   slug: hetero
+        name: Hétérotopies
+        description: "L’Hétérotopie, c’est un lieu qui héberge l’imaginaire,\nune utopie réalisée que l’on peut visiter,\ntoucher, critiquer, ici et maintenant."
+        url: http://heterotopies.overblog.com/cartographie
+        url_map: https://www.google.com/maps/d/embed?mid=zWH3cGb_zi2I.kCaJt8ZC4ufk
+        color: 6779AB
+    -   slug: ldv
+        name: "Lieux de vie\nBases nomades"
+        description: "Lieux de vie, collectifs, bases nomades, \necolieux, fermes autogérées, Zap, Zad, \ncommunautés, squats..."
+        url: https://www.google.com/maps/d/viewer?mid=zCUrDZ_sv7Fw.k9HCrqv3hIVA
+        color: C06538
+    -   slug: citoy
+        name: Citoyens en Transition
+        description: "Des alternatives individuelles\net collectives pour la construction\nd'un vivre ensemble plus riche"   
+        url: http://citoyens.en-transition.fr/
+        color: 766859
+    -   slug: tour
+        name: Tour de France des Alternatives
+        description: "Partout en France, de simples citoyens montrent\nnon seulement qu’un autre monde est possible,\nmais qu’il existe déjà"
+        url: http://www.tourdefrancedesalternatives.fr/
+        color: 8F5D83
+    -   slug: colib
+        name: Groupes Locaux Colibris
+        description: "Aujourd’hui Colibris compte un réseau de 55 groupes locaux animés par des citoyens bénévoles.\nLes groupes locaux participent activement à la vie et à la gouvernance de Colibris et\nportent localement les valeurs et les messages du mouvement national"
+        url: http://www.colibris-lemouvement.org/ensemble/rejoindre-un-groupe-local
+        color: 63862A
+    -   slug: gf
+        name: Bénéloves
+        description: "Générations Futur est une association\nqui promeut les médias libres et toutes\nles actions bénéloves et solidaires"
+        url: http://generationsfutur.zici.fr/
+        color: 985249
+    -   slug: reporterre
+        name: Articles Reporterre
+        description: Le quotidien de l'écologie
+        url: http://reporterre.net
+        type: geojson
+        geojson: map_report.geojson
+        _geojson: http://reporterre.net/spip.php?page=gis_json&objets=articles&limit=500
+        color: 5db678
+    -   slug: bastamag
+        name: Portail Bastamag
+        description: Portail de la presse indépendante
+        url: http://portail.bastamag.net
+        type: geojson
+        geojson: map_basta.geojson
+        _geojson: http://portail.bastamag.net/spip.php?page=gis_json&objets=syndic_articles&limit=500
+        color: bc4a4a
+    -   slug: passerelle
+        name: Annonces de la revue Passerelle Éco
+        description: "Le réseau des éco-annonces\nde la revue Passerelle Éco"
+        url: http://www.ecovillageglobal.fr
+        type: geojson
+        geojson: map_passeco.geojson
+        _geojson: http://www.ecovillageglobal.fr/spip.php?page=gis_json&objets=annonces&limit=500
+        color: c7d12c
+    -   slug: ecoles
+        name: Réseau des écoles alternatives
+        description: Réseau pour l'école de la vie
+        url: https://www.google.com/maps/d/viewer?mid=zJ1PitvzVPN0.kN_S8AWMFbDQ
+        type: geojson
+        geojson: map_ecoles.geojson
+        color: d59454
+    -   slug: agedefaire
+        name: Points de vente L'âge de faire
+        description: Des outils pour changer le monde
+        url: http://www.lagedefaire-lejournal.fr/
+        type: xml
+        xml: map_agedefaire.xml
+        _xml: http://magasin.lagedefaire-lejournal.fr/index.php?controller=stores?ajax=1&all=1
+        color: 95b5d5
+    -   slug: ffdn
+        name: Fournisseurs d'accès internet FFDN
+        description: "Fournisseurs d'Accès à Internet respectant\nla Neutralité du Net et gérés par des bénévoles"
+        url: https://db.ffdn.org/
+        json: map_ffdn.json
+        _json: https://db.ffdn.org/isp/map_data.json
+        color: ce67c5
+    -   slug: circuitscourts
+        name: Circuits courts en Belgique
+        description: —
+        url: http://www.circuits-courts.be
+        json: map_circuitscourts.json
+        _json: http://www.circuits-courts.be/get_json_data.php?data=ext
+        color: c6bc90
+        hide: true
+    -   slug: demosphere
+        name: Démosphère
+        description: "Le réseau des éco-annonces\nde la revue Passerelle Éco"
+        url: http://www.demosphere.eu/
+        json:
+            - http://montpellier.demosphere.eu
+            - http://paris.demosphere.eu
+            - http://gard.demosphere.eu
+        color: ed9522
+        hide: true  
+network:
+    loading: >
+        le réseau est en cours d'affichage
+        <br><br>
+        attention, le temps de chargement peut être long (7.7Mo)
+        <br><br>
+        merci pour votre patience
+    image: links_eniac.jpg
+    credits: >
+        [network.gexf](https://github.com/manifestes/manifestes/blob/gh-pages/data/network.gexf) produit avec l'outil libre [hyphe](http://hyphe.medialab.sciences-po.fr/) et affiché avec [sigma.js](http://sigmajs.org/)
+        
+        
+        voir aussi la [liste des sites web](https://github.com/manifestes/manifestes/blob/gh-pages/data/utiles/network_in.csv) du réseau
+disclaimer:
+    sections: >
+        Vous pouvez consulter les textes dans l'ordre que vous voulez
+        
+
+        Pour les applications concrètes, consultez les liens ou la carte
+    links: >
+        ici, des liens ajoutés **avec nos petites mains**. ça fait un peu fouilli, leur désordre reflète la multiplicité des collectifs et initiatives !
+
+
+        (ce sera toujours mieux que google qui ne nous donne à voir que les plus gros/riches)
+
+
+        **pour naviguer par thématiques, activez les tags** grâce à l'icône en haut à gauche dans le menu (ne marche pas sur mobile)
+    network: >
+        **le réseau de tous les sites internet** et des liens qu'ils ont entre eux (approche quantitative)
+
+
+        - utilisez la molette de votre souris pour zoomer
+
+        - cliquez sur un point pour voir les sites voisins (cités ou citant)
+
+        - triple-cliquez sur un point pour ouvrir le site dans une nouvelle fenêtre
+
+
+        **Les couleurs correspondent aux classes de modularité**, c-à-d aux communautés détectées selon la structure du réseau
+    map: >
+        - Les **couleurs** des points correspondent aux différentes sources (cf légende si votre écran est suffisamment grand)
+
+        - Les points **les plus gros** renvoient vers d'autres cartes
+
+
+        N'oubliez pas qu'ils ne sont pas tous des lieux de passage: **observez donc le plus grand respect** si vous souhaitez les visiter: renseignez-vous et prévenez avant de débarquer !
+
+
+        Pour ajouter, modifier ou supprimer un lieu, utilisez [ce tableau partagé](http://framacalc.org/carto)
+menu:
+    backtip: retourner à l'introduction
+    hometip: page d'accueil
+    taggingoff: voir les thématiques
+    taggingon: désactiver les thématiques
+    search: chercher
+    sections: textes
+    links: liens
+    network: réseau
+    map: carte
+    calendar: agenda
+    calendartip: démosphère !
+    print: imprimer
+    printtip: "imprimez\nla fenêtre\nqui s'ouvre !"
+    sourcetip: voir les données brutes
+    discusstext: discuter, corriger, proposer
+    discussback: revenir au texte
+tagtip: "filtrer par thématiques"
+tags:
+    about: "à propos|question-circle = à propos de ce projet, contexte,\nliste de discussion, code source"
+    group: "collectifs|users = groupes, réseaux, coopératives,\ncollectifs, associations, structures"
+    list: "annuaires|database = bases de données, annuaires,\nressources, moteurs de recherche"
+    tool: "outils|wrench = guides et fiches pratiques, tutoriaux,\noutils, services, instruments"
+    map: "lieux|map-marker = cartes, adresses de lieux physiques,\ntiers-lieux"
+    calendar: "agenda|calendar-check-o = calendriers, rendez-vous,\nfestivals, événements"
+    text: textes|file-text = articles, livres, textes
+    audio: sons|volume-up = radios, musiques, sons
+    image: "images|picture-o = images, dessins,\nphotos, graphiques"
+    video: "films|film = videos, films, documentaires,\nTV, images mouvantes"
+    eat: _se nourrir = alimentation, recettes, cuisine, nourriture
+    health: "_santé = santé, remèdes, plantes\nbien-être, corps, sport"
+    home: "_habiter = logement, habitat, hébergement,\néco-lieux, auto-construction, terrain"
+    move: _se déplacer = transports, mobilité, véhicules, co-voiturage
+    subsist: "_solidarité = migrants, sans-papiers, sdf,\nsouffrances, survie,\ninégalités d'accès, des chances\ndiscriminations"
+    object: "_objets = récupération, recyclage, réutilisation,\nressourceries, artisanats, réappropriation,\nsavoirs-faire, construire soi-même, diy,\néquipement, matériel, mobilier, machines"
+    energy: "_énergie = nucléaire, électrique,\néolien, solaire"
+    slow: "_ralentir = rencontrer, découvrir, partager,\ncommunication non violente,\ndécroissance"
+    media: "_médias = information, presse,\njournalisme, actualité"
+    act: "_action = actions pratiques quotidiennes,\ndésobéissance civile, militantisme"
+    education: "éducation = école, université, recherche,\napprendre, se former,\nenseigner, partages de savoir"
+    work: travail = emploi, chômage, activité remunérée
+    alienation: "aliénation = publicité, propagande, aliénation,\nconditionnements, contrôle,\nfichage, cloud, surveillance"
+    emancipation: "émancipation = réappropriation, émancipation,\nautonomie, autogestion, horizontalité,\népanouissement"
+    love: "amour = rêves, utopies, promesses, idéaux,\nhumour et amour toujours !"
+    genre: "genres = patriarcat, féminisme,\ngenres, LGBT, famille,\nracisme, sexisme"
+    zad: "luttes = grands projets inutiles, lois absurdes,\nsquats, occupations, zad,\nradicalités, avant-gardes"
+    words: "langage = récits, mots, interprétations, controverses, discours,\ns'accorder, s'engueuler, débattre"
+    creation: "formes = création, art, culture, écriture,\ndesign, processus, formes"
+    space: espace public = espaces partagés, communs, ville
+    science: "science = sciences, techniques,\nnanotechnologies, manipulation du vivant"
+    web: internet = web, numérique, réseaux
+    companies: "ennemis = néocapitalisme, récupérations, greenwashing,\nmultinationales, puissances d'argent... boycott!"
+    history: "histoire = (néo)colonialismes, impérialisme,\npassifs historique"
+    law: "juridique = lois, aspects juridiques,\ndémarches administratives,\nlégislations"
+    economy: "économie = échanges, commerce, troc, don,\néconomie, argent, monnaie, finance, dette,\nrevenu de base inconditionnel"
+    politics: "politique = politique et représentation,\nconcertation, décider ensemble,\ncommuns, open (res)sources, démocratie"
+    philo: philosophie = réflexion, théorie, principes
+    earth: "planète = environnement, climat, déchets, pollution,\neau, animaux, végétaux"
+    agriculture: "agriculture = (perma)cultures, graines, semences,\njardinage, élevage"
+footer:
+    lastupdatetext: dernière modification
+    content: >
+        ##*voir aussi*
+
+        + le [document partagé](https://lite6.framapad.org/p/manifestes): discutoire, choses à faire
+
+        + la liste de discussion [manifestes@lists.riseup.net](https://lists.riseup.net/www/subscribe/manifestes)
+
+        + le [code source](https://github.com/manifestes/manifestes) du site et les [dernières modifications](https://github.com/manifestes/manifestes/commits/gh-pages)
+
+        + les contenus: [meta](https://github.com/manifestes/manifestes/blob/gh-pages/data/meta_fr.yml), [sections de texte](https://github.com/manifestes/manifestes/blob/gh-pages/data/sections_fr.yml), [liens](https://github.com/manifestes/manifestes/blob/gh-pages/data/links_fr.yml), [citations en vrac](https://github.com/manifestes/manifestes/blob/gh-pages/data/utiles/quotes_fr.yml)
+
+        + [les lieux de la carte à ajouter/modifier](https://framacalc.org/carto)
+
+        + le compte twitter [@manifestes](https://twitter.com/manifestes)
+
+        + dites-nous [bonjour@utopies-concretes.org](mailto:bonjour@utopies-concretes.org) !
+
+
