@@ -26,5 +26,8 @@ simpler home grid, flattened sections with subtitles, no more disqus, simple lef
 ###[160420](http://manifestes.github.io/archived/160420)
 simpler map markers, bastamag, reporterre, passerelle eco, ... & many places from the framacalc table
 
-###[1606??](http://manifestes.github.io/archived/1606??)
-icons for all tags, lot more sections and quotes, draft now visibles on dev ...
+###[160608](http://manifestes.github.io/archived/160608)
+icons & colors for tags, layout for quotes, more texts & quotes, drafts on dev, cities jumps on map (more sources)
+
+###[16-?](http://manifestes.github.io/archived/16-?)
+?
