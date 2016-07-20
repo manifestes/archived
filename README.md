@@ -29,5 +29,6 @@ simpler map markers, bastamag, reporterre, passerelle eco, ... & many places fro
 ###[160608](http://manifestes.github.io/archived/160608)
 icons & colors for tags, layout for quotes, more texts & quotes, drafts on dev, cities jumps on map (more sources)
 
-###[16-?](http://manifestes.github.io/archived/16-?)
-?
+###[160720](http://manifestes.github.io/archived/160720)
+«slugs»: fullpage simple social share for each text; map: better city jumper, async load, small legend for mobile with toggle all, demosphere using cors.io, 3615ninja link, «files» folder
+
