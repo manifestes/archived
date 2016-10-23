@@ -1,0 +1,66 @@
+<div class="map full">
+
+  <style ng-bind-html="state.mapStyles"></style>
+
+  <div class="legendwrapper">
+    <div class="legendtoggler">
+      <div class="selectmap" ng-click="toggleMapLegendAll();">
+        select all
+        <i class="fa fa-check-square-o"></i>
+      </div>
+      <div class="selectmap" ng-click="toggleMapLegendNone();">
+        select none
+        <i class="fa fa-square-o"></i>
+      </div>
+    </div>
+    <div class="legend">
+      <div
+        ng-repeat="c in meta.mapcredits"
+        ng-if="!c.hide"
+        class="credit hint--bottom"
+        style="border-left: 5px solid #{{c.color}};"
+        ng-click="toggleMapLegend(c); $event.stopPropagation();"
+        ng-class="{
+          odd:$index%2==1,
+          active: c.active
+        }"
+        data-hint="{{c.description}}">
+        <!--<img
+          class="marker"
+          src="https://api.tiles.mapbox.com/v3/marker/pin-s-circle+{{c.color}}.png">-->
+        <div class="count">{{c.count}}</div>
+        <!--
+        hint.css is cut if parent have overflow
+        see https://github.com/chinchang/hint.css/issues/78
+        -->
+        <div class="name">
+          <span ng-if="!settings.smallDevice">{{c.name}} </span>
+          <span ng-if="settings.smallDevice">{{c.slug}} </span>
+          <a href="{{c.url}}" target="_blank">
+            <i ng-if="c.slug!='misc' && !c.loading" class="fa fa-external-link-square"></i>
+            <i ng-if="c.loading" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="jumper">
+    <div class="button leaflet-bar leaflet-control">
+      <i class="fa fa-sign-in"></i>
+    </div>
+    <div class="jumps">
+      <div
+        ng-repeat="c in meta.mapjumps"
+        ng-click="mapJumpTo(c);"
+        class="jump"
+        ng-class="{
+          global: c.zoom<10
+        }">
+          {{c.name}}
+      </div>
+    </div>
+  </div>
+
+  <div id="leaflet" height="100%" width="100%"></div>
+</div>

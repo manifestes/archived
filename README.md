@@ -30,5 +30,8 @@ simpler map markers, bastamag, reporterre, passerelle eco, ... & many places fro
 icons & colors for tags, layout for quotes, more texts & quotes, drafts on dev, cities jumps on map (more sources)
 
 ###[160720](http://manifestes.github.io/archived/160720)
-«slugs»: fullpage simple social share for each text; map: better city jumper, async load, small legend for mobile with toggle all, demosphere using cors.io, 3615ninja link, «files» folder, «add» button on menu to framapads
+«slugs»: fullpage simple social share for each text; map: better city jumper, async load, small legend for mobile with toggle all, demosphere using cors.io, 3615ninja link, «files» folder, + «add» menu button to framapads
+
+###[161023](http://manifestes.github.io/archived/161023)
+bigger tagsmenu sidebar (with #labels popups), huge more more new quotes, images & texts contents, files & inspiration folders (not included to lower archived size), completed slug process, new framapad url
 
