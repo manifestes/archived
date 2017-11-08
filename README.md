@@ -35,3 +35,8 @@ icons & colors for tags, layout for quotes, more texts & quotes, drafts on dev, 
 ###[161023](http://manifestes.github.io/archived/161023)
 bigger tagsmenu sidebar (with #labels popups), huge more more new quotes, images & texts contents, files & inspiration folders (not included to lower archived size), completed slug process, new framapad url
 
+###[171108](http://manifestes.github.io/archived/171108)
+included 3615ninja, files deleted, more images, quotes, many points from framacalc carto
+
+###[180101](http://manifestes.github.io/archived/171108)
+future is bright.
