@@ -38,5 +38,9 @@ bigger tagsmenu sidebar (with #labels popups), huge more more new quotes, images
 ###[171108](http://manifestes.github.io/archived/171108)
 included 3615ninja, files deleted, more images, quotes, many points from framacalc carto
 
-###[180101](http://manifestes.github.io/archived/171108)
-future is bright.
+###[180218](http://manifestes.github.io/archived/180218)
+reduced to one lang: fr, colors on splash intro svg, new menu with: pixels, books, started searchsuggestions on pixels
+
+###[180500](http://manifestes.github.io/archived/180500)
+to become... : merge texts+quotes+links into abcd: no more date or related quote, thinking new way to browse cards of content, using both «words» & «tags/concepts»
+

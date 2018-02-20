@@ -1,0 +1,268 @@
+
+
+---
+url: http://utopies-concretes.org
+source:
+    github: https://github.com/manifestes/manifestes
+    meta: https://github.com/manifestes/manifestes/blob/gh-pages/data/meta_fr.yml
+    texts: https://github.com/manifestes/manifestes/blob/gh-pages/data/texts_fr.yml
+    quotes: https://github.com/manifestes/manifestes/blob/gh-pages/data/quotes_fr.yml
+    links: https://github.com/manifestes/manifestes/blob/gh-pages/data/links_fr.yml
+    pixels: https://github.com/manifestes/manifestes/blob/gh-pages/data/inspirations/
+    books: pas de bonne source ?
+    network: https://github.com/manifestes/manifestes/blob/gh-pages/data/network/network_in.csv
+    map: https://framacalc.org/carto
+    ninja: https://github.com/manifestes/manifestes/blob/gh-pages/data/network/network_in.csv
+    catalog: https://github.com/manifestes/manifestes/blob/gh-pages/data/catalog.yml
+splash:
+    images:
+        - 0-urgent-de-ralentir_960F20.svg
+        - 1-manifeste-utopies-concretes_337A96.svg
+        - 2-prendre-position_259D69.svg
+        - 3-collectifs-transition_000000.svg
+        - 4-espoirs-fous_9000BE.svg
+    enter: "enter the void"
+intro:
+    -   layout: texts
+        title: manifeste
+        descr: morceaux de textes choisis
+        image: FingerBones.jpg
+        quote:
+            author: Audrey
+            content: Que ceux qui sont déjà conscients se sentent soutenus, et que les autres ouvrent les yeux pour changer, à leur rythme, à leur mesure
+    -   layout: pixels
+        title: pixel.s
+        descr: composer d'autres manières de voir le monde
+        image: hometohome.jpg
+        quote:
+            author: 
+            content: L‘homme est fait de la matière dont sont faits les rêves
+    -   layout: network
+        title: galaxie
+        descr: un graphe de 3000 sites internet de collectifs, structures, médias, blogs — positions relatives & interconnexions
+        image: sombrelac.jpg
+        quote:
+            author: Proverbe mexicain
+            content: Ils ont essayé de nous enterrer, ils ne savaient pas que nous étions des graines
+    -   layout: map
+        title: carte
+        descr: "3000 lieux à visiter : caravane des alternatives, hétérotopies, articles Reporterre et Bastamag, annonces Passerelle éco, lieux de vie et bases nomades..."
+        image: SophieRaynal_pretemoitesyeux.fr.jpg
+        quote:
+            author: Chris Marker, Le Joli Mai, 1h28min
+            content: l'avenir est là ! mais les gens ne le voient pas ... ils attendent l'horizon au loin
+    -   layout: links
+        title: ".: partout :."
+        descr: "sélection de perles à explorer : articles, vidéos, médias libres, projets"
+        image: nepaspencherdanslevirage.jpg
+        quote:
+            author: Bernard Werber
+            content: L'important n'est pas de convaincre, mais de donner à réfléchir
+    -   layout: ninja
+        title: ¡ ninja !
+        descr: random rules — exploration du hasard
+        image: DannyVonRyswyk.jpg
+        quote:
+            author: Georges Perec
+            content: >
+                Vivre, c'est passer d'un espace à un autre, en essayant le plus possible de ne pas se cogner
+network:
+    loading: >
+        le réseau est en cours d'affichage
+        <br><br>
+        attention, le temps de chargement peut être long (8.4Mo)
+        <br><br>
+        merci pour votre patience
+    image: links_eniac.jpg
+    credits: >
+        [network.gexf](https://github.com/manifestes/manifestes/blob/gh-pages/data/network.gexf) produit avec l'outil libre [hyphe](http://hyphe.medialab.sciences-po.fr/) et affiché avec [sigma.js](http://sigmajs.org/)
+        
+        
+        les nœuds de degré <10 sont ici masqués. voir [les données complètes](https://github.com/manifestes/manifestes/blob/gh-pages/data/network/)
+
+
+        date de mise à jour: mi-avril 2017
+disclaimer:
+    texts: >
+        Vous pouvez consulter les textes dans l'ordre que vous voulez
+        
+
+        Pour les applications concrètes, consultez les liens ou la carte
+
+
+        **Les couleurs** correspondent aux thématiques
+    quotes: >
+        Les citations qui apparaissent **en orange** sont celles déjà utilisées dans des sections de textes
+
+
+        servez-vous !
+    links: >
+        ici, des liens ajoutés **avec nos petites mains**. ça fait un peu fouilli, leur désordre reflète la multiplicité des collectifs et initiatives !
+
+
+        (ce sera toujours mieux que google qui ne nous donne à voir que les plus gros/riches)
+
+
+        **pour naviguer par thématiques, activez les tags** grâce à l'icône en haut à gauche dans le menu (ne marche pas sur mobile)
+    pixels: >
+        lavons-nous les yeux !
+
+        *clic* pour agrandir, *clic droit* pour «enregistrer sous...»
+
+
+        en cas de doute à propos des droits, contactez-nous !
+    books: >
+        vérifiez les droits d'auteurs avant consultation !
+    network: >
+        **le réseau de tous les sites internet** et des liens qu'ils ont entre eux (approche quantitative)
+
+
+        - utilisez la molette de votre souris pour zoomer
+
+        - cliquez sur un point pour voir les sites voisins (cités ou citant)
+
+        - double-cliquez sur un point pour ouvrir le site dans une nouvelle fenêtre
+
+
+        **Les couleurs correspondent aux classes de modularité**, c-à-d aux communautés détectées selon la structure du réseau
+    map: >
+        - Les **couleurs** des points correspondent aux différentes sources (cf légende si votre écran est suffisamment grand)
+
+        - Les points **les plus gros** renvoient vers d'autres cartes
+
+
+        N'oubliez pas qu'ils ne sont pas tous des lieux de passage: **observez donc le plus grand respect** si vous souhaitez les visiter: renseignez-vous et prévenez avant de débarquer !
+
+
+        Pour ajouter, modifier ou supprimer un lieu, utilisez [ce tableau partagé](http://framacalc.org/carto)
+    catalog: >
+        faites-moi.
+menu:
+    backtip: retourner à l'introduction
+    hometip: page d'accueil
+    taggingoff: voir les thématiques
+    taggingon: désactiver les thématiques
+    search: chercher
+    addzone: ajouter !
+    sourcetip: "voir la source\ndes données"
+    trysearch: "essayez avec :"
+    buttons:
+        -   slug: ninja
+            label: ninja !
+            icon: fa-magic
+            tip: "consulter au hasard\nun site du réseau"
+        -   slug: map
+            label: carte
+            icon: fa-map-o
+        -   slug: network
+            label: réseau
+            icon: fa-sitemap
+        -   slug: links
+            label: liens
+            icon: fa-heart
+        -   slug: pixels
+            label: pixels
+            icon: fa-image
+        -   slug: books
+            label: livres
+            icon: fa-book
+            tip: "contactez-nous !"
+        -   slug: quotes
+            label: cit.
+            icon: fa-quote-left
+        -   slug: texts
+            label: textes
+            icon: fa-bullhorn
+    calendar: agenda
+    calendartip: démosphère !
+    catalogtip: "voir toutes\nles données"
+    pad:
+        texts:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: suggérer ou<br>modifier un texte
+        quotes:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: ajouter une<br>citation
+        books:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: proposer un<br>document
+        pixels:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: proposer une image<br>ou un dessin
+        links:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: suggérer ou<br>modifier un lien
+        network:
+            link: "http://annuel.framapad.org/p/3615ninja"
+            text: suggérer un site<br>signaler un intru
+        map:
+            link: "http://framacalc.org/carto"
+            text: ajouter ou<br>modifier un lieu
+        ninja:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: suggérer un site<br>signaler un intru
+tagtip: "filtrer par thématiques"
+tags:
+    about: "question = à propos = à propos de ce projet, contexte,\nliste de discussion, code source"
+    group: "users = collectifs = groupes, réseaux, coopératives,\ncollectifs, associations, structures"
+    list: "database = annuaires = bases de données, annuaires,\nressources, moteurs de recherche"
+    tool: "wrench = outils = guides et fiches pratiques, tutoriaux,\noutils, services, instruments"
+    text: "file-text-o = textes = articles, livres, textes"
+    image: "file-image-o = images = images, dessins,\nphotos, graphiques"
+    audio: "file-audio-o = sons = radios, musiques, sons"
+    video: "file-video-o = films = videos, films, documentaires,\nTV, images mouvantes"
+    earth: "globe = planète = environnement, climat, déchets, pollution,\neau, animaux, végétaux"
+    agriculture: "pagelines = agriculture = (perma)cultures, graines, semences,\njardinage, élevage"
+    eat: "cutlery = _se nourrir = alimentation, manger,\nrecettes, cuisine, nourriture"
+    health: "medkit = _santé = santé, remèdes, plantes\nbien-être, corps, sport"
+    home: "home = _habiter = logement, habitat, hébergement,\néco-lieux, auto-construction, terrain"
+    move: "bicycle = _se déplacer = transports, mobilité,\nvéhicules, co-voiturage"    
+    object: "cogs = _objets = récupération, recyclage, réutilisation,\nressourceries, artisanats, réappropriation,\nsavoirs-faire, construire soi-même, diy,\néquipement, matériel, mobilier, machines"
+    energy: "plug = _énergie = nucléaire, électrique,\néolien, solaire"
+    map: "map-o = lieux = cartes, adresses de lieux physiques,\ntiers-lieux"
+    calendar: "calendar = agendas = calendriers, rendez-vous,\nfestivals, événements"
+    work: "briefcase = travail = emploi, chômage, activité remunérée"
+    slow: "child = _sobriété = ralentir, rencontrer, découvrir, partager,\ncommunication non violente,\ndécroissance"
+    media: "newspaper-o = _médias = information, presse,\njournalisme, actualité"
+    education: "book = éducation = école, université, recherche,\napprendre, se former,\nenseigner, partages de savoir"
+    alienation: "thumbs-down = aliénation = publicité, propagande, aliénation,\nconditionnements, contrôle, violences,\nfichage, cloud, surveillance, pouvoirs"
+    emancipation: "thumbs-up = émancipation = réappropriation, émancipation,\nautonomie, autogestion, horizontalité,\népanouissement, ouverture"
+    subsist: "exclamation-circle = _solidarité = migrants, sans-papiers, sdf,\nsouffrances, survie,\ninégalités d'accès, des chances\ndiscriminations"
+    act: "bullhorn = _action = actions pratiques quotidiennes,\ndésobéissance civile, militantisme\nsortir de sa zone de confort"
+    love: "heart = amour = rêves, idéaux, énergies,\namour, spiritualités,\nfoi, religions, mort"
+    genre: "transgender = genres = patriarcat, féminisme,\ngenres, LGBT, famille,\nracisme, sexisme"
+    zad: "bolt = luttes = grands projets inutiles,\nsquats, occupations, zad,\nradicalités, avant-gardes"
+    words: "commenting = langage = récits, mots, interprétations, controverses, discours,\ns'accorder, s'engueuler, débattre,\nmédiations"
+    creation: "object-group = formes = création, art, culture, écriture,\ndesign, processus, formes,\nhumour"
+    space: "street-view = espaces = espaces publics, partagés, communs, ville"
+    science: "flask = science = sciences, techniques,\nnanotechnologies,\nmanipulation du vivant"
+    web: "at = internet = web, numérique, réseaux"
+    companies: "building = ennemis = néocapitalisme, récupérations, greenwashing,\nmultinationales, puissances d'argent... boycott!"
+    history: "history = histoire = (néo)colonialismes, impérialisme,\npassifs historique"
+    law: "balance-scale = juridique = lois, aspects juridiques,\ndémarches administratives,\nlégislations"
+    economy: "money = économie = échanges, commerce, troc, don,\néconomie, argent, monnaie, finance, dette,\nrevenu de base inconditionnel"
+    politics: "bank = politique = politique et représentation,\nconcertation, décider ensemble,\ncommuns, open (res)sources, démocratie"
+    philo: "puzzle-piece = philosophie = réflexion, théories, principes,\nidéologies, spiritualités"
+moretags:
+    ?time: "hourglass-3 = temps = temporalités, rythmes, rapports aux temps,\nfuturisme, présentisme"
+footer:
+    lastupdatetext: dernière modification
+    content: >
+        ##*voir aussi*
+
+        + le [document partagé](https://annuel.framapad.org/p/manifestes): discutoire, choses à faire
+
+        + la liste de discussion [utopies-concretes@lists.riseup.net](https://lists.riseup.net/www/subscribe/utopies-concretes)
+
+        + le [code source](https://github.com/manifestes/manifestes) du site et les [dernières modifications](https://github.com/manifestes/manifestes/commits/gh-pages)
+
+        + [les lieux de la carte à ajouter/modifier](https://framacalc.org/carto)
+
+        + le compte twitter [@manifestes](https://twitter.com/manifestes)
+
+        + dites-nous [bonjour@utopies-concretes.org](mailto:bonjour@utopies-concretes.org) !
+        
+        
+        *toute reproduction non commerciale de tout ça est encouragée*
+
+
