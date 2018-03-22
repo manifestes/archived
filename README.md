@@ -1,6 +1,8 @@
 # archived
 ## [150201](http://manifestes.github.io/archived/150201)
-(not git'ed) very first tryout, 3 panels: theory, quotes, actions
+(src not git'ed) very first tryout, 3 panels: theory, quotes, actions
+
+<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/150201_a.png" width="200px">
 
 ## [150620](http://manifestes.github.io/archived/150620)
 collapsible colored (only) sections, links at the end of each section
