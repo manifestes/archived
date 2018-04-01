@@ -1,0 +1,350 @@
+
+
+---
+url: http://utopies-concretes.org
+source:
+    github: https://github.com/manifestes/manifestes
+    meta: https://github.com/manifestes/manifestes/blob/gh-pages/data/meta.yml
+    abcd: https://github.com/manifestes/manifestes/blob/gh-pages/data/abcd.yml
+    pixels: https://github.com/manifestes/manifestes/blob/gh-pages/data/pixels/
+    network: https://github.com/manifestes/manifestes/blob/gh-pages/data/network/network_in.csv
+    map: https://framacalc.org/carto
+    ninja: https://github.com/manifestes/manifestes/blob/gh-pages/data/network/network_in.csv
+splash:
+    images:
+        - 0-urgent-de-ralentir_960F20.svg
+        - 1-manifeste-utopies-concretes_337A96.svg
+        - 2-prendre-position_259D69.svg
+        - 3-collectifs-transition_000000.svg
+        - 4-espoirs-fous_9000BE.svg
+    enter: "enter the void"
+intro:
+    -   layout: abcd
+        title: penser
+        descr: Abécédaire — mots & morceaux choisis
+        image: warsheep.jpg
+        quote:
+            author: Audrey
+            content: Que ceux qui sont déjà conscients se sentent soutenus, et que les autres ouvrent les yeux pour changer, à leur rythme, à leur mesure
+    -   layout: pixels
+        title: voir
+        descr: Composer d'autres manières de voir le monde
+        image: arton6207-76652.jpg
+        quote:
+            author: 
+            content: L‘homme est fait de la matière dont sont faits les rêves
+    -   layout: network
+        title: galaxie
+        descr: Un graphe de 3000 sites internet de collectifs, structures, médias, blogs — positions relatives & interconnexions
+        image: arbrecouleurs.jpg
+        quote:
+            author: Proverbe mexicain
+            content: Ils ont essayé de nous enterrer, ils ne savaient pas que nous étions des graines
+    -   layout: map
+        title: carte
+        descr: "3000 lieux à visiter : caravane des alternatives, hétérotopies, articles Reporterre et Bastamag, annonces Passerelle éco, lieux de vie et bases nomades..."
+        image: ericDrooker_skull.jpg
+        quote:
+            author: Chris Marker, Le Joli Mai, 1h28min
+            content: l'avenir est là ! mais les gens ne le voient pas ... ils attendent l'horizon au loin
+network:
+    loading: >
+        le réseau est en cours d'affichage
+        <br><br>
+        attention, le temps de chargement peut être long (8.4Mo)
+        <br><br>
+        merci pour votre patience
+    image: links_eniac.jpg
+    credits: >
+        [network.gexf](https://github.com/manifestes/manifestes/blob/gh-pages/data/network.gexf) produit avec l'outil libre [hyphe](http://hyphe.medialab.sciences-po.fr/) et affiché avec [sigma.js](http://sigmajs.org/)
+        
+        
+        les nœuds de degré <10 sont ici masqués. voir [les données complètes](https://github.com/manifestes/manifestes/blob/gh-pages/data/network/)
+
+
+        date de mise à jour: mi-avril 2017
+disclaimer:
+    abcd: >
+        L'ordre d'affichage est aléatoire
+
+
+        **Les couleurs** correspondent aux thématiques
+    pixels: >
+        lavons-nous les yeux !
+
+        *clic* pour agrandir, *clic droit* pour «enregistrer sous...»
+
+
+        en cas de doute à propos des droits, contactez-nous !
+    network: >
+        **le réseau de tous les sites internet** et des liens qu'ils ont entre eux (approche quantitative)
+
+
+        - utilisez la molette de votre souris pour zoomer
+
+        - cliquez sur un point pour voir les sites voisins (cités ou citant)
+
+        - double-cliquez sur un point pour ouvrir le site dans une nouvelle fenêtre
+
+
+        **Les couleurs correspondent aux classes de modularité**, c-à-d aux communautés détectées selon la structure du réseau
+    map: >
+        - Les **couleurs** des points correspondent aux différentes sources (cf légende si votre écran est suffisamment grand)
+
+        - Les points **les plus gros** renvoient vers d'autres cartes
+
+
+        N'oubliez pas qu'ils ne sont pas tous des lieux de passage: **observez donc le plus grand respect** si vous souhaitez les visiter: renseignez-vous et prévenez avant de débarquer !
+
+
+        Pour ajouter, modifier ou supprimer un lieu, utilisez [ce tableau partagé](http://framacalc.org/carto)
+menu:
+    backtip: introduction
+    hometip: accueil
+    taggingoff: voir les thématiques
+    taggingon: désactiver les thématiques
+    search: filtrer...
+    sourcetip: "voir la source\ndes données"
+    buttons:
+        -   slug: ninja
+            label: ninja !
+            icon: fa-magic
+            tip: "consulter au hasard\nun site du réseau"
+        -   slug: map
+            label: carte
+            icon: fa-map-o
+        -   slug: network
+            label: galaxie
+            icon: fa-snowflake-o
+        -   slug: pixels
+            label: voir
+            icon: fa-eye
+        -   slug: abcd
+            label: penser
+            icon: fa-child
+    calendar: agenda
+    calendartip: démosphère !
+    catalogtip: "voir toutes\nles données"
+    pad:
+        abcd:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: suggérer ou<br>modifier un texte
+        pixels:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: proposer une image<br>ou un dessin
+        network:
+            link: "http://annuel.framapad.org/p/3615ninja"
+            text: suggérer un site<br>signaler un intru
+        map:
+            link: "http://framacalc.org/carto"
+            text: ajouter ou<br>modifier un lieu
+        ninja:
+            link: "http://annuel.framapad.org/p/manifestes"
+            text: suggérer un site<br>signaler un intru
+tags:
+    about:
+        - question-circle
+        - C'est quoi ce projet ?
+        - projet,pourquoi ce site ?,contexte,qui,outil,contact
+    earth:
+        - globe
+        - Planète
+        - gaia,environnement,climat,géologie,déchets,pollution,ressources,eau,animaux,végétaux,éléments,planète,terre,globe,écosystème,astronomie,monde
+    health:
+        - child
+        - Santé
+        - remèdes,plantes,bien-être,corps,sport,santé,yoga,méditation
+    agriculture:
+        - pagelines
+        - Cultures
+        - (perma)cultures,graines,semences,jardinage,élevage,terre,potager,agriculture,compost
+    eat:
+        - cutlery
+        - Manger
+        - nourrir,alimentation,manger,recettes,cuisine,nourriture,digérer
+    space:
+        - street-view
+        - Espace.s
+        - espaces publics,partagés,communs,ville,rue,place.s
+    home:
+        - home
+        - Habiter
+        - logement,habitat,hébergement,éco-lieux,auto-construction,terrain,maison,logis,écovillage,dome,zome,cabane,dormir,refuge
+    move:
+        - bicycle
+        - Bouger
+        - se déplacer,transports,mobilité,véhicules,co-voiturage,marcher,train
+    suffer:
+        - life-ring
+        - Aider
+        - migrants,sans-papiers,sdf,souffrances,survie,inégalités,discriminations,aider,sécurité
+    energy:
+        - plug
+        - Énergie
+        - nucléaire,électrique,éolien,solaire,cosmique,vitale,transformée,pétrole,gaz
+    object:
+        - cogs
+        - Bric et Broc
+        - récup',recyclage,réutilisation,ressourceries,artisanats,réappropriation,savoirs-faire,construire soi-même,diy,équipement,matériel,mobilier,machines,déchets
+    work:
+        - briefcase
+        - Emploi
+        - emploi,chômage,activité,remunération,travail,patron
+    time:
+        - moon-o
+        - Temps
+        - temporalités,rythmes,futurisme,présentisme,temps,ralentir,patience,lenteur,délai,quotidien
+    media:
+        - bullhorn
+        - Médias
+        - information,presse,journalisme,actualité,medias
+    education:
+        - shower
+        - Éducation
+        - école,université,recherche,apprendre,se former,enseigner,partages de savoir,éducation,school
+    group:
+        - group
+        - Collectif.s
+        - groupes,collectifs,ensembles,organisation,cercles,assemblée.s
+    alienation:
+        - magnet
+        - Aliénation
+        - publicité,propagande,aliénation,conditionnements,contrôle,fichage,cloud,surveillance,pouvoirs,détournements,harcelement,pub,monstre.s
+    emancipation:
+        - paper-plane
+        - Émancipation
+        - réappropriation,émancipation,autonomie,autogestion,horizontalité,épanouissement,ouverture
+    realize:
+        - low-vision
+        - Se rendre compte
+        - réaliser,se rendre compte,changer
+    act:
+        - bolt
+        - Action.s
+        - actions,pratiques,désobéissance civile,militantisme,zone de confort,passage à l'acte,faire,agir,occupations,squats,radicalités,bataille.s
+    game:
+        - hand-spock-o
+        - Invente toi-même les règles
+        - jeux,s'amuser,hasard,règles
+    human:
+        - female
+        - Humain.e
+        - rencontrer,découvrir,partager,décroissance,humilité,humanité,essence,instinct.s
+    focus:
+        - sun-o
+        - Présence
+        - attention,focus,écoute,présence,concentration
+    emotion:
+        - podcast
+        - Émotion.s
+        - peur,émotions,sensible,corps,sentir,ressentir,irrationel
+    balance:
+        - tree
+        - Équilibre
+        - équilibre,balance,dualité,habitudes,répétitions,cycles,intérieur,extérieur
+    love:
+        - heart
+        - Amour
+        - amour,attraction,désir
+    spirit:
+        - snowflake-o
+        - Spiritualité.s
+        - rêves,idéaux,énergies,amour,spiritualités,foi,religions,mort,croyances,yoga,jésus,dieu,esprit.s,astrologie,vide,rien,néant,origine
+    genre:
+        - venus-mars
+        - Genre.s
+        - patriarcat,féminisme,genres,LGBT,famille,racisme,sexisme,corps,sentir,sens
+    power:
+        - hand-rock-o
+        - Puissance
+        - pouvoir,puissance,impuissance,force.s,contrôle,esclavage,consentement,maîtrise,compétition
+    words:
+        - commenting
+        - Langage
+        - récits,mots,interprétations,controverses,discours,s'accorder,s'engueuler,débats,médiations,langage,conflits
+    creation:
+        - bug
+        - Forme.s
+        - création,art,culture,écriture,design,processus,formes,humour,émergence,représentation.s
+    science:
+        - flask
+        - Science.s
+        - sciences,techniques,nanotechnologies,manipulation,vivant,logique,rationalité
+    web:
+        - hashtag
+        - Digital
+        - web,internet,réseaux,technologies
+    violence:
+        - industry
+        - Violence.s
+        - violence,brutalité,police,oppression,sang,flic,souffrance.s
+    economy:
+        - money
+        - Économie
+        - échanges,commerce,troc,don,économie,argent,monnaie,finance,dette,revenu de base
+    companies:
+        - trash
+        - Multinationales
+        - néocapitalisme,récupérations,greenwashing,multinationales,puissances,argent,boycott,entreprises,ennemis,money,consommation
+    politics:
+        - bank
+        - Politique
+        - politique,représentation,concertation,décider,communs,open (res)sources,démocratie,hierarchie,voter,élection.s
+    law:
+        - gavel
+        - Juridique
+        - lois,aspects juridiques,démarches administratives,législations,justice
+    philo:
+        - puzzle-piece
+        - Philosophie.s
+        - réflexions,théories,principes,idéologies,dialectique,penser,philosophie,raison,psychanalyse
+    history:
+        - book
+        - Histoire.s
+        - (néo)colonialismes,impérialisme,histoire,oubli,archives,mémoire
+    video:
+        - file-video-o
+        - Vidéo.s
+        - videos,films,documentaires,TV,images mouvantes,traces,archives
+    audio:
+        - file-audio-o
+        - Son.s
+        - radios,musiques,sons,vibrations,ondes,bruits,écoute,silence,parole,oreilles
+    image:
+        - file-image-o
+        - Image.s
+        - images,dessins,photos,graphiques
+    text:
+        - file-text-o
+        - Texte.s
+        - articles,livres,textes,mots,phrases
+    list:
+        - list
+        - Ressources
+        - bases de données,annuaires,ressources,moteurs de recherche
+    tool:
+        - wrench
+        - Outils
+        - guides et fiches pratiques,tutoriaux,outils,services,instruments,diy
+    map:
+        - map-o
+        - Cartes
+        - cartes,adresses,lieux physiques,tiers-lieux,endroits,où ?
+    calendar:
+        - calendar
+        - Calendriers
+        - calendriers,rendez-vous,festivals,événements,moments
+footer:
+    buttons:
+        -   label: document<br>partagé
+            icon: fa-edit
+            href: https://annuel.framapad.org/p/manifestes
+        -   label: lieux à ajouter<br>sur la carte
+            icon: fa-map-o
+            href: https://framacalc.org/carto
+        -   label: voir le code<br>source du site
+            icon: fa-github
+            href: https://github.com/manifestes/manifestes
+        -   label: écrivez-nous !<br>bonjour@utopies-concretes.org
+            icon: fa-envelope-o
+            href: mailto:bonjour@utopies-concretes.org

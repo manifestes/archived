@@ -1,0 +1,282 @@
+
+<div
+  class="intro"
+  ng-class="{hidden:!state.intro}">
+  <div class="splash">
+    <div
+      class="mouseoverlay"
+      ng-click="slideSplashImage(true,true);">
+    </div>
+    <i
+      class="arrow right fa fa-caret-right"
+      ng-if="state.introimage < meta.splash.images.length-1"
+      ng-click="slideSplashImage(true,true)"></i>
+    <i
+      class="arrow left fa fa-caret-left"
+      ng-if="state.introimage > 0"
+      ng-click="slideSplashImage(false,true)"></i>
+
+    <div
+      ng-repeat="i in meta.splash.images"
+      class="image"
+      back-img="{{settings.datapath}}splash/{{i.filename}}"
+      ng-style="{'background-color': i.color}"
+      ng-class="{
+        active: $index == state.introimage,
+        left: $index > state.introimage,
+        right: $index < state.introimage,
+        full: i.full
+      }">
+    </div>
+  </div>
+
+  <div class="foot">
+    <!-- <div class="keywords">{{meta.splash.keywords}}</div> -->
+    <div class="button color-{{getRandomInt()}}" ng-click="state.intro=false;">
+      <i class="fa fa-caret-down"></i>
+      <!--{{meta.splash.enter}}-->
+    </div>
+  </div>
+</div>
+
+<div
+  id="container"
+  class="container"
+  ng-class="{hidden:state.intro}"
+  ng-click="state.disclaim[state.layout]=false;">
+
+  <div class="header">
+
+    <!-- TOP MENU -->
+    <div class="menu">
+      
+      <!-- RIGHT MENU BUTTONS, REVERSE ORDER-->
+      <div class="menubuttons">
+        
+        <a
+          class="menubutton hint--left"
+          id="calendar"
+          data-hint="{{meta.menu.calendartip}}"
+          href="http://demosphere.eu/fr">
+          <div class="bubble"><i class="fa fa-calendar"></i></div>
+          <span>{{meta.menu.calendar}}</span>
+        </a>
+
+        <div
+          ng-repeat="b in meta.menu.buttons"
+          class="menubutton"
+          id="{{b.slug}}"
+          data-hint="{{b.tip}}"
+          ng-click="b.slug!='books' && changeLayout(b.slug);"
+          ng-class="{
+            disabled: b.slug=='books',
+            active: state.layout==b.slug,
+            'hint--left': b.slug=='ninja',
+            'hint--bottom': b.slug!='ninja' }">
+          <div class="bubble"><i class="fa {{b.icon}}"></i></div>
+          <a
+            class="ext hint--bottom"
+            href="{{meta.source[b.slug]}}"
+            target="_blank"
+            data-hint="{{meta.menu.sourcetip}}">
+            <i class="fa fa-arrow-up"></i>
+          </a>
+          <span>{{b.label}}</span>
+        </div>
+
+      </div>
+
+      <!-- BACK TO INTRO -->
+      <div class="minimenu">
+        <div
+          class="action backintro hint--right"
+          data-hint="{{meta.menu.backtip}}"
+          ng-click="state.intro = true;">
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div
+          class="action home hint--right"
+          data-hint="{{meta.menu.hometip}}"
+          ng-click="changeLayout('home');"
+          ng-class="{active:state.layout=='home'}">
+          <i class="fa fa-home"></i>
+        </div>
+      </div>
+
+      <!-- SEARCH ZONE -->
+      <div
+        class="searchinput"
+        ng-class="{inactive:
+          state.layout=='ninja' || state.layout=='map' || state.layout=='full' || state.layout=='home'}"
+        >
+
+        <!-- TAGS -->
+        <div
+          class="tagactivator hint--bottom-right"
+          data-hint="{{state.tagging ? meta.menu.taggingon : meta.menu.taggingoff;}}"
+          ng-class="{
+            active: state.tagging,
+            filtered: state.tags.length>0
+          }"
+          ng-mouseover="overTagActivator(true);"
+          ng-mouseout="overTagActivator(false);"
+          ng-click="toggleTagging();">
+          <i
+            class="fa"
+            ng-class="{
+              'fa-hand-paper-o': !state.tagging,
+              'fa-hand-spock-o': state.tagging
+            }"></i>
+        </div><form autocomplete="off" ng-submit="searchSubmit(state.searchinput);">
+          <input
+            type="text"
+            placeholder="{{meta.menu.search}}"
+            ng-model="state.searchinput" 
+            ng-change="searchSubmit(state.searchinput);"
+            ng-click="$event.stopPropagation();"
+            ng-enter="searchSubmit(state.searchinput);"
+            ng-class="{highlight:state.search}"/>
+          <i
+          ng-if="state.searchinput.length"
+          ng-click="searchSubmit(); toggleTag();"
+          class="clearinput fa fa-times fa-lg"></i>
+          <i
+          ng-click="state.searchinput.length && searchSubmit(state.searchinput);"
+          class="goinput fa fa-search fa-lg"></i>
+        </form>
+      </div>
+
+      <!-- ADD ZONE -->
+      <a
+        ng-if="state.layout!='home'"
+        class="padbutton"
+        href="{{state.pad.link}}"
+        target="_blank">
+        <i class="fa fa-plus-circle"></i>
+        <div ng-bind-html="state.pad.text"></div>
+      </a>
+      
+    </div>
+
+    <!-- TAGS COLOR/ICONS PANEL(s) -->
+    <div
+      class="tagspanel left"
+      ng-class="{
+        filtering: state.tags.length,
+        active: state.tagging
+      }">
+      <div
+        ng-repeat="t in tagsArray | limitTo : tagsArray.length/2"
+        ng-click="toggleTag(t.tag);"
+        class="linetag tagcolor{{t.index}} hint--right"
+        ng-style="{height: 400/tagsArray.length + '%'}"
+        data-hint="{{tagHint(t)}}"
+        ng-class="{
+          active: isTagActive(t),
+          popuped: isTagAutoComplete(t),
+          focused: isTagFromHoveredSection(t) || state.showAllTags
+        }">
+        <div class="back"></div>
+        <i class="fa fa-{{t.icon}}"></i>
+      </div>
+    </div>
+    <div
+      class="tagspanel right"
+      ng-class="{
+        filtering: state.tags.length,
+        active: state.tagging
+      }">
+      <div
+        ng-repeat="t in tagsArray | limitTo : tagsArray.length/2 : tagsArray.length/2"
+        ng-click="toggleTag(t.tag);"
+        class="linetag tagcolor{{t.index}} hint--left"
+        ng-style="{height: 400/tagsArray.length + '%'}"
+        data-hint="{{tagHint(t)}}"
+        ng-class="{
+          active: isTagActive(t),
+          popuped: isTagAutoComplete(t),
+          focused: isTagFromHoveredSection(t) || state.showAllTags
+        }">
+        <div class="back"></div>
+        <i class="fa fa-{{t.icon}}"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div
+    class="wrapper layout-{{state.layout}}"
+    ng-class="{
+      tagsbordered: state.tagging,
+      searched: state.search,
+      filtered: state.tags.length
+    }">
+
+    <!-- message displayed the first time you arrived on a layout -->
+    <div
+      ng-if="state.layout!='textsprint' && state.layout!='home'"
+      class="disclopener"
+      ng-class="{active: !state.disclaim[state.layout]}"
+      ng-click="state.disclaim[state.layout]=true; $event.stopPropagation();">
+      <i class="fa fa-question-circle"></i>
+    </div>
+    <div
+      class="disclaimer"
+      ng-if="state.layout!='catalogprint' && state.layout!='home'"
+      ng-class="{active: state.disclaim[state.layout]}"
+      ng-click="state.disclaim[state.layout]=false;">
+
+      <div 
+        class="full"
+        ng-class="{
+          left: state.layout=='network' || state.layout=='map'
+          }"
+        compile-here="md2Html(meta.disclaimer[state.layout])">
+      </div>
+    
+      <i class="fa fa-times" ng-click="state.disclaim[state.layout] = false;"></i>
+    </div>
+
+    <div class="page" ng-include="partialTemplate();"></div>
+
+    <div ng-if="state.layout!='map' && state.layout!='network'" class="footer">
+
+      <a
+        ng-repeat="f in meta.footer.buttons"
+        class="padbutton"
+        href="{{f.href}}"
+        target="_blank">
+        <i class="fa {{f.icon}}"></i>
+        <div ng-bind-html="f.label"></div>
+      </a>
+
+      <form
+        class="inline mailing"
+        action="https://lists.riseup.net/www"
+        method="POST"
+        target="_blank">
+        <div class="label">inscrivez-vous sur la <a target="_blank" href="https://lists.riseup.net/www/subscribe/utopies-concretes">liste de discussion</a></div>
+        <input
+          class="email"
+          type="email"
+          name="email"
+          placeholder="moi@courriel.org"
+          ng-model="state.email" 
+          ng-click="$event.stopPropagation();"
+          ng-enter="subscribeList(state.email);"/>
+        <input type="hidden" name="list" value="utopies-concretes">
+        <input type="hidden" name="action" value="subrequest">
+        <input
+          class="subscribe"
+          type="submit"
+          name="action_subrequest"
+          value="inscrire">
+      </form>
+
+      <div><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></div>
+
+      <div id="move-commons-badge"><div xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:mc="http://movecommons.org/ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" about="http://utopies-concretes.org" typeof="mc:Collective"></div><div property="foaf:name" content="Utopies Concrètes"></div><div rel="foaf:homepage" href="http://utopies-concretes.org"></div><div rel="mc:moveCommonsType" resource="[mc:NonProfit]"></div><div rel="mc:moveCommonsType" resource="[mc:Reproducible]"></div><div rel="mc:moveCommonsType" resource="[mc:ReinforcesCommons]"></div><div rel="mc:moveCommonsType" resource="[mc:GrassRoots]"></div><div rel="mc:focusesIn" resource="[mc:Town]"></div><div about="#manifeste" typeof="skos:Concept"></div><div about="# annuaire" typeof="skos:Concept"></div><div about="# carte" typeof="skos:Concept"></div><div about="# alternatives" typeof="skos:Concept"></div><a href="http://movecommons.org/fr/np-rp-rc.to-gr/0.1/"><img src="//movecommons.org/mc/0.1/images/np-rp-rc.to-gr-88x31-0.1.png" alt="Move Commons À but non lucratif, Reproductible, Reinforcing the Town/community/society Commons, Organisation horizontale" /></a></div>
+    </div>
+
+  </div>
+</div>

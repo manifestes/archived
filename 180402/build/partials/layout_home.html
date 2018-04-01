@@ -1,0 +1,18 @@
+<div
+  ng-repeat="e in meta.intro"
+  ng-click="changeLayout(e.layout);"
+  class="fullbox"
+  id="{{e.layout}}">
+
+  
+  <span class="h1">{{e.title}}</span>
+  <span class="h2">{{e.descr}}</span>
+  
+  <div class="quote-container">
+    <div class="quote" compile-here="e.quote.content"></div>
+    <div class="author" compile-here="e.quote.author"></div>
+  </div>
+
+  <div class="overlay"></div>
+  <div class="image cover" back-img="{{settings.datapath}}pixels/{{e.image}}"></div>
+</div>
