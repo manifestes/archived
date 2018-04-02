@@ -17,11 +17,11 @@ separated tab for links, displayed tags within each section, network as side pan
 ## [151006](http://manifestes.github.io/archived/151006)
 splash intro with title rather than list of collectives, tags not displayed as default, geographical map, tags as graph and grid
 
-<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_c.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_d.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_e.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_f.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_g.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_todo_shot_map.jpg" width="200px">
+<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_c.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_d.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_e.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_f.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_g.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151006_h.jpg" width="200px">
 
 ## [151112](http://manifestes.github.io/archived/151112)
 
-<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_c.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_todo_shot_map.jpg" width="200px">
+<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_c.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_d.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/151112_e.jpg" width="200px">
 
 ## [151205](http://manifestes.github.io/archived/151205)
 gray splash intro, orange disclaimers for each layout, better display for tags and links
@@ -36,7 +36,7 @@ home layout as grid, links as simple list, fullscreen network layout separated f
 ## [160110](http://manifestes.github.io/archived/160110)
 larger search field with integrated tagactivator, larger tags-grid on menu hover, lighter tags within each section/link
 
-<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_c.jpg" width="200px">
+<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_b.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_c.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160110_d.jpg" width="200px">
 
 ## [160120](http://manifestes.github.io/archived/160120)
 simpler home grid, flattened sections with subtitles, no more disqus, simple left tags-panel, tags not shown within sections/links, full-crawled network, more map sources
@@ -46,7 +46,7 @@ simpler home grid, flattened sections with subtitles, no more disqus, simple lef
 ## [160420](http://manifestes.github.io/archived/160420)
 simpler map markers, bastamag, reporterre, passerelle eco, ... & many places from the framacalc table
 
-<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160420_a.jpg" width="200px">
+<img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160420_a.jpg" width="200px"><img src="https://raw.githubusercontent.com/manifestes/archived/gh-pages/images/160420_b.jpg" width="200px">
 
 ## [160608](http://manifestes.github.io/archived/160608)
 icons & colors for tags, layout for quotes, more texts & quotes, drafts on dev, cities jumps on map (more sources)
